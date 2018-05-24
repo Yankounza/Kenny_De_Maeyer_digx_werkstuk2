@@ -61,7 +61,6 @@
                     <connections>
                         <outlet property="lastUpdate" destination="gsj-2t-aAv" id="crV-ac-5cI"/>
                         <outlet property="stationMap" destination="UWl-tz-Lqm" id="79F-V9-C5v"/>
-                        <segue destination="Bny-ET-nuy" kind="show" id="m8L-tf-hcR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -71,7 +70,7 @@
         <!--Detail View Controller-->
         <scene sceneID="ACX-SJ-Y3U">
             <objects>
-                <viewController id="Bny-ET-nuy" customClass="DetailViewController" customModule="werkstuk_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detail" id="Bny-ET-nuy" customClass="DetailViewController" customModule="werkstuk_2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kN4-xC-gHK"/>
                         <viewControllerLayoutGuide type="bottom" id="qyr-un-62U"/>
