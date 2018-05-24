@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3630539F20B6B027008D8626 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3630539E20B6B027008D8626 /* MainViewController.swift */; };
+		363053A120B6B045008D8626 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363053A020B6B045008D8626 /* DetailViewController.swift */; };
 		3FC48CC520B589420050AF5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC48CC420B589420050AF5F /* AppDelegate.swift */; };
 		3FC48CCA20B589420050AF5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC48CC820B589420050AF5F /* Main.storyboard */; };
 		3FC48CCD20B589420050AF5F /* werkstuk_2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FC48CCB20B589420050AF5F /* werkstuk_2.xcdatamodeld */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3630539E20B6B027008D8626 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		363053A020B6B045008D8626 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3FC48CC120B589420050AF5F /* werkstuk_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = werkstuk_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC48CC420B589420050AF5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FC48CC920B589420050AF5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 				3FC48CD020B589420050AF5F /* LaunchScreen.storyboard */,
 				3FC48CD320B589420050AF5F /* Info.plist */,
 				3FC48CCB20B589420050AF5F /* werkstuk_2.xcdatamodeld */,
+				3630539E20B6B027008D8626 /* MainViewController.swift */,
+				363053A020B6B045008D8626 /* DetailViewController.swift */,
 			);
 			path = werkstuk_2;
 			sourceTree = "<group>";
@@ -259,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3630539F20B6B027008D8626 /* MainViewController.swift in Sources */,
 				3FC48CCD20B589420050AF5F /* werkstuk_2.xcdatamodeld in Sources */,
 				3FC48CC520B589420050AF5F /* AppDelegate.swift in Sources */,
+				363053A120B6B045008D8626 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +511,7 @@
 				3FC48CEE20B589420050AF5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3FC48CEF20B589420050AF5F /* Build configuration list for PBXNativeTarget "werkstuk_2Tests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +520,7 @@
 				3FC48CF120B589420050AF5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3FC48CF220B589420050AF5F /* Build configuration list for PBXNativeTarget "werkstuk_2UITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +529,7 @@
 				3FC48CF420B589420050AF5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
