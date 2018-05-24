@@ -9,13 +9,14 @@
 import UIKit
 import MapKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, MKMapViewDelegate {
 
     let URL_VILLO = "https://api.jcdecaux.com/vls/v1/stations?apiKey=6d5071ed0d0b3b68462ad73df43fd9e5479b03d6&contract=Bruxelles-Capitale"
     var stationArray: Array<Station> = Array()
     var locationManager: CLLocationManager!
     var currentLocation: CLLocation!
-    
+    var selectedStation: Station?
+    var selectedAnnotation: MKPointAnnotation!
     @IBOutlet weak var lastUpdate: UILabel!
     @IBOutlet weak var stationMap: MKMapView!
     
@@ -100,19 +101,46 @@ class MainViewController: UIViewController {
         for station in stationArray {
             let annotation = MKPointAnnotation()
             annotation.coordinate = CLLocationCoordinate2D(latitude: station.position.latitude!, longitude: station.position.longitude!)
+            annotation.title = station.name
             self.stationMap.addAnnotation(annotation)
         }
     }
     
+    internal func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation {
+            return nil
+        }
+        
+        let pin = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pin")
+        pin.canShowCallout = true
+        pin.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        return pin
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control:UIControl) {
+        let annView = view.annotation
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailVC = storyboard.instantiateViewController(withIdentifier: "detail") as! DetailViewController
+        
+        for station in stationArray {
+            if (station.name == (annView?.title)!) {
+                detailVC.station = station
+            }
+        }
+        
+        self.navigationController?.pushViewController(detailVC, animated: true)
+    }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }
