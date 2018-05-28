@@ -20,21 +20,23 @@ class CoreDataController: NSObject {
     }
     
     
-    func addToCore() {
+    func addToCore(stationArray: Array<Station>) {
         let entity = NSEntityDescription.entity (forEntityName: "Stations", in: self.context)
         let newStation = NSManagedObject (entity: entity!, insertInto: self.context)
         
-        newStation.setValue("value", forKey: "number")
-        newStation.setValue("value", forKey: "name")
-        newStation.setValue("value", forKey: "address")
-        newStation.setValue("value", forKey: "latitude")
-        newStation.setValue("value", forKey: "longitude")
-        newStation.setValue("value", forKey: "banking")
-        newStation.setValue("value", forKey: "bonus")
-        newStation.setValue("value", forKey: "status")
-        newStation.setValue("value", forKey: "bike_stands")
-        newStation.setValue("value", forKey: "available_bike_stands")
-        newStation.setValue("value", forKey: "available_bikes")
+        for station in stationArray {
+            newStation.setValue(station.number, forKey: "number")
+            newStation.setValue(station.name, forKey: "name")
+            newStation.setValue(station.address, forKey: "address")
+            newStation.setValue(station.position.latitude, forKey: "latitude")
+            newStation.setValue(station.position.longitude, forKey: "longitude")
+            newStation.setValue(station.banking, forKey: "banking")
+            newStation.setValue(station.bonus, forKey: "bonus")
+            newStation.setValue(station.status, forKey: "status")
+            newStation.setValue(station.bike_stands, forKey: "bike_stands")
+            newStation.setValue(station.available_stands, forKey: "available_bike_stands")
+            newStation.setValue(station.available_bikes, forKey: "available_bikes")
+        }
         
         // save the data
         do {

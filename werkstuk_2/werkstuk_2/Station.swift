@@ -22,7 +22,7 @@ class Station: NSObject {
     var banking:Bool
     var bonus:Bool
     var status:String
-    var total_bike:Int
+    var bike_stands:Int
     var available_stands:Int
     var available_bikes:Int
     
@@ -34,7 +34,7 @@ class Station: NSObject {
         self.banking = false
         self.bonus = false
         self.status = "UNKNOWN"
-        self.total_bike = 0
+        self.bike_stands = 0
         self.available_stands = 0
         self.available_bikes = 0
     }

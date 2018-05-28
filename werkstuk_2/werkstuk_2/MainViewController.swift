@@ -78,7 +78,7 @@ class MainViewController: UIViewController, MKMapViewDelegate {
                             tempObj.bonus = obj as! Bool
                         }
                         if let obj = stationDict.value(forKey: "bike_stands") {
-                            tempObj.total_bike = obj as! Int
+                            tempObj.bike_stands = obj as! Int
                         }
                         if let obj = stationDict.value(forKey: "available_bike_stands") {
                             tempObj.available_stands = obj as! Int

@@ -42,7 +42,7 @@ class DetailViewController: UIViewController {
             self.bonus.text = "NO"
             self.bonus.textColor = UIColor.red
         }
-        self.totalOfStands.text = String(self.station.total_bike)
+        self.totalOfStands.text = String(self.station.bike_stands)
         if(self.station.status == "OPEN") {
             self.status.text = self.station.status
             self.status.textColor = UIColor.green
