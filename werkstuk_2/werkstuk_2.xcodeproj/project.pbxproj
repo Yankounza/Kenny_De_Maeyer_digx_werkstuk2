@@ -17,6 +17,8 @@
 		3FC48CD220B589420050AF5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC48CD020B589420050AF5F /* LaunchScreen.storyboard */; };
 		3FC48CDD20B589420050AF5F /* werkstuk_2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC48CDC20B589420050AF5F /* werkstuk_2Tests.swift */; };
 		3FC48CE820B589420050AF5F /* werkstuk_2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC48CE720B589420050AF5F /* werkstuk_2UITests.swift */; };
+		B5D2077420BC3B5C007685DD /* StationModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5D2077220BC3B5C007685DD /* StationModel.xcdatamodeld */; };
+		B5D2077620BC3DB8007685DD /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D2077520BC3DB8007685DD /* CoreDataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		3FC48CE320B589420050AF5F /* werkstuk_2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = werkstuk_2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC48CE720B589420050AF5F /* werkstuk_2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = werkstuk_2UITests.swift; sourceTree = "<group>"; };
 		3FC48CE920B589420050AF5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5D2077320BC3B5C007685DD /* StationModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StationModel.xcdatamodel; sourceTree = "<group>"; };
+		B5D2077520BC3DB8007685DD /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,8 @@
 				3630539E20B6B027008D8626 /* MainViewController.swift */,
 				363053A620B6BE11008D8626 /* Station.swift */,
 				367A2FE820B6F6C10082D4D3 /* DetailViewController.swift */,
+				B5D2077220BC3B5C007685DD /* StationModel.xcdatamodeld */,
+				B5D2077520BC3DB8007685DD /* CoreDataController.swift */,
 			);
 			path = werkstuk_2;
 			sourceTree = "<group>";
@@ -271,7 +277,9 @@
 				3630539F20B6B027008D8626 /* MainViewController.swift in Sources */,
 				363053A720B6BE11008D8626 /* Station.swift in Sources */,
 				3FC48CCD20B589420050AF5F /* werkstuk_2.xcdatamodeld in Sources */,
+				B5D2077620BC3DB8007685DD /* CoreDataController.swift in Sources */,
 				367A2FE920B6F6C10082D4D3 /* DetailViewController.swift in Sources */,
+				B5D2077420BC3B5C007685DD /* StationModel.xcdatamodeld in Sources */,
 				3FC48CC520B589420050AF5F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,6 +553,16 @@
 			);
 			currentVersion = 3FC48CCC20B589420050AF5F /* werkstuk_2.xcdatamodel */;
 			path = werkstuk_2.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		B5D2077220BC3B5C007685DD /* StationModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B5D2077320BC3B5C007685DD /* StationModel.xcdatamodel */,
+			);
+			currentVersion = B5D2077320BC3B5C007685DD /* StationModel.xcdatamodel */;
+			path = StationModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
