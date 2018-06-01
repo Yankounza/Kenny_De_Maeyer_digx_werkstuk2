@@ -19,27 +19,39 @@ class MainViewController: UIViewController, MKMapViewDelegate {
     var selectedAnnotation: MKPointAnnotation!
     @IBOutlet weak var lastUpdate: UILabel!
     @IBOutlet weak var stationMap: MKMapView!
+    let coreData: CoreDataController = CoreDataController()
     
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        getDataFromUrl();
+        if Reachability.isConnectedToNetwork() {
+            print("Internet connection OK")
+            DispatchQueue.global(qos: .userInteractive).async {
+                self.getDataFromUrl()
+            }
+        }
+        if self.coreData.entityIsEmpty() {
+                addStationAnnotations()
+            }
         
-        if(CLLocationManager.locationServicesEnabled()) {
-            self.locationManager = CLLocationManager()
-            self.locationManager.delegate = self as? CLLocationManagerDelegate
-            self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            self.locationManager.requestAlwaysAuthorization()
-            self.locationManager.requestWhenInUseAuthorization()
-            self.locationManager.startUpdatingLocation()
-            currentLocation = locationManager.location
-            if(currentLocation != nil) {
-                let radius: CLLocationDistance = 50000
-                let center = CLLocationCoordinate2D(latitude: self.currentLocation.coordinate.latitude, longitude: self.currentLocation.coordinate.longitude)
-                let region = MKCoordinateRegionMakeWithDistance(center, radius, radius)
-                self.stationMap.setRegion(region, animated: true)
+        DispatchQueue.main.async {
+            if(CLLocationManager.locationServicesEnabled()) {
+                self.locationManager = CLLocationManager()
+                self.locationManager.delegate = self as? CLLocationManagerDelegate
+                self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+                self.locationManager.requestAlwaysAuthorization()
+                self.locationManager.requestWhenInUseAuthorization()
+                self.locationManager.startUpdatingLocation()
+                self.currentLocation = self.locationManager.location
+                if(self.currentLocation != nil) {
+                    let radius: CLLocationDistance = 50000
+                    let center = CLLocationCoordinate2D(latitude: self.currentLocation.coordinate.latitude, longitude: self.currentLocation.coordinate.longitude)
+                    let region = MKCoordinateRegionMakeWithDistance(center, radius, radius)
+                    self.stationMap.setRegion(region, animated: true)
+                }
             }
         }
     }
@@ -87,7 +99,10 @@ class MainViewController: UIViewController, MKMapViewDelegate {
                             tempObj.available_bikes = obj as! Int
                         }
                     }
+                    self.stationArray.append(tempObj)
                 }
+                
+                self.coreData.addToCore(stationArray: self.stationArray)
                 
                 OperationQueue.main.addOperation ({
                     self.addStationAnnotations()
@@ -98,7 +113,8 @@ class MainViewController: UIViewController, MKMapViewDelegate {
     }
     
     func addStationAnnotations() {
-        for station in stationArray {
+        self.stationArray = coreData.fetchFromCore()
+        for station in self.stationArray {
             let annotation = MKPointAnnotation()
             annotation.coordinate = CLLocationCoordinate2D(latitude: station.position.latitude!, longitude: station.position.longitude!)
             annotation.title = station.name
@@ -123,7 +139,9 @@ class MainViewController: UIViewController, MKMapViewDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let detailVC = storyboard.instantiateViewController(withIdentifier: "detail") as! DetailViewController
         
-        for station in stationArray {
+        self.stationArray = self.coreData.fetchFromCore()
+        
+        for station in self.stationArray {
             if (station.name == (annView?.title)!) {
                 detailVC.station = station
             }
@@ -131,16 +149,4 @@ class MainViewController: UIViewController, MKMapViewDelegate {
         
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
-
-    
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    
-
 }

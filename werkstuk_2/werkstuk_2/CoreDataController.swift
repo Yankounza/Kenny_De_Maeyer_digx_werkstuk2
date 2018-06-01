@@ -46,8 +46,9 @@ class CoreDataController: NSObject {
         }
     }
     
-    func fetchFromCore() {
+    func fetchFromCore()  -> Array<Station> {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Stations")
+        var stationArray:Array<Station> = Array()
         
         //working with requests
         //request.predicate = NSPredicate(format: "age = %@", "12")
@@ -57,10 +58,44 @@ class CoreDataController: NSObject {
         do {
             let result = try self.context.fetch(request)
             for data in result as! [NSManagedObject] {
-                print(data.value(forKey: "attribute") as! String)
+                let tempStation:Station = Station()
+                
+                tempStation.number = data.value(forKey: "number") as! Int
+                tempStation.name = data.value(forKey: "name") as! String
+                tempStation.address = data.value(forKey: "address") as! String
+                tempStation.position.latitude = data.value(forKey: "latitude") as? Double
+                tempStation.position.longitude = data.value(forKey: "longitude") as? Double
+                tempStation.banking = data.value(forKey: "banking") as! Bool
+                tempStation.bonus = data.value(forKey: "bonus") as! Bool
+                tempStation.status = data.value(forKey: "status") as! String
+                tempStation.bike_stands = data.value(forKey: "bike_stands") as! Int
+                tempStation.available_stands = data.value(forKey: "available_bike_stands") as! Int
+                tempStation.available_bikes = data.value(forKey: "available_bikes") as! Int
+                
+                stationArray.append(tempStation)
             }
         } catch {
             print("Failed")
         }
+        
+        return stationArray
+    }
+    
+    func entityIsEmpty() -> Bool {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Stations")
+        var count:Int = 0
+        do {
+            count = try self.context.count(for: request)
+        } catch {
+            print(error)
+        }
+        
+        
+        if count == 0 {
+            return true
+        } else {
+            return false
+        }
+        
     }
 }

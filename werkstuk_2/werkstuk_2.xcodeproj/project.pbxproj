@@ -10,6 +10,7 @@
 		3630539F20B6B027008D8626 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3630539E20B6B027008D8626 /* MainViewController.swift */; };
 		363053A720B6BE11008D8626 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363053A620B6BE11008D8626 /* Station.swift */; };
 		367A2FE920B6F6C10082D4D3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A2FE820B6F6C10082D4D3 /* DetailViewController.swift */; };
+		3F536B0D20C18C7800CF2638 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F536B0C20C18C7800CF2638 /* Reachability.swift */; };
 		3FC48CC520B589420050AF5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC48CC420B589420050AF5F /* AppDelegate.swift */; };
 		3FC48CCA20B589420050AF5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC48CC820B589420050AF5F /* Main.storyboard */; };
 		3FC48CCD20B589420050AF5F /* werkstuk_2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FC48CCB20B589420050AF5F /* werkstuk_2.xcdatamodeld */; };
@@ -42,6 +43,7 @@
 		3630539E20B6B027008D8626 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		363053A620B6BE11008D8626 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		367A2FE820B6F6C10082D4D3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3F536B0C20C18C7800CF2638 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		3FC48CC120B589420050AF5F /* werkstuk_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = werkstuk_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC48CC420B589420050AF5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FC48CC920B589420050AF5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				367A2FE820B6F6C10082D4D3 /* DetailViewController.swift */,
 				B5D2077220BC3B5C007685DD /* StationModel.xcdatamodeld */,
 				B5D2077520BC3DB8007685DD /* CoreDataController.swift */,
+				3F536B0C20C18C7800CF2638 /* Reachability.swift */,
 			);
 			path = werkstuk_2;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				B5D2077620BC3DB8007685DD /* CoreDataController.swift in Sources */,
 				367A2FE920B6F6C10082D4D3 /* DetailViewController.swift in Sources */,
 				B5D2077420BC3B5C007685DD /* StationModel.xcdatamodeld in Sources */,
+				3F536B0D20C18C7800CF2638 /* Reachability.swift in Sources */,
 				3FC48CC520B589420050AF5F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
