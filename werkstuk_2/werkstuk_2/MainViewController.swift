@@ -19,6 +19,7 @@ class MainViewController: UIViewController, MKMapViewDelegate {
     var selectedAnnotation: MKPointAnnotation!
     @IBOutlet weak var lastUpdate: UILabel!
     @IBOutlet weak var stationMap: MKMapView!
+    
     let coreData: CoreDataController = CoreDataController()
     
     
@@ -34,7 +35,12 @@ class MainViewController: UIViewController, MKMapViewDelegate {
             }
         }
         if self.coreData.entityIsEmpty() {
-                addStationAnnotations()
+            DispatchQueue.main.async {
+                self.addStationAnnotations()
+            }
+                print("Internet connection Failed")
+                let alert = UIAlertView(title: "No Internet Connection", message: "Make Sure your device is connected to the internet", delegate: nil, cancelButtonTitle: "OK")
+                alert.show()
             }
         
         DispatchQueue.main.async {
@@ -55,6 +61,25 @@ class MainViewController: UIViewController, MKMapViewDelegate {
             }
         }
     }
+    
+    @IBAction func refresh(_ sender: Any) {
+        if Reachability.isConnectedToNetwork() {
+            print("Internet connection OK")
+            DispatchQueue.global(qos: .userInteractive).async {
+                self.getDataFromUrl()
+                self.viewDidLoad()
+            }
+        }
+        else
+        {
+            print("Internet connection Failed")
+            let alert = UIAlertView(title: "No Internet Connection", message: "Make Sure your device is connected to the internet", delegate: nil, cancelButtonTitle: "OK")
+            alert.show()
+        }
+        
+    }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
