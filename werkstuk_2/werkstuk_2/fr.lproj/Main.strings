@@ -1,0 +1,63 @@
+
+/* Class = "UIButton"; normalTitle = "Refresh"; ObjectID = "0Pu-Wn-ti5"; */
+"0Pu-Wn-ti5.normalTitle" = "Refresh";
+
+/* Class = "UILabel"; text = "Last update:"; ObjectID = "1eF-jE-fOS"; */
+"1eF-jE-fOS.text" = "Last update:";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "2Yh-ZZ-j3T"; */
+"2Yh-ZZ-j3T.text" = "5";
+
+/* Class = "UILabel"; text = "NO"; ObjectID = "6fc-Jd-eeF"; */
+"6fc-Jd-eeF.text" = "NO";
+
+/* Class = "UILabel"; text = "Total of stands:"; ObjectID = "7EW-7L-nGT"; */
+"7EW-7L-nGT.text" = "Total of stands:";
+
+/* Class = "UILabel"; text = "Status:"; ObjectID = "9vs-Xe-LBm"; */
+"9vs-Xe-LBm.text" = "Status:";
+
+/* Class = "UILabel"; text = "Available bikes:"; ObjectID = "Iaq-yO-P1n"; */
+"Iaq-yO-P1n.text" = "Available bikes:";
+
+/* Class = "UILabel"; text = "Address:"; ObjectID = "MQ8-aI-YhS"; */
+"MQ8-aI-YhS.text" = "Address:";
+
+/* Class = "UILabel"; text = "Actually"; ObjectID = "PtI-Hv-rlb"; */
+"PtI-Hv-rlb.text" = "Actually";
+
+/* Class = "UILabel"; text = "25"; ObjectID = "Pzd-WH-MDK"; */
+"Pzd-WH-MDK.text" = "25";
+
+/* Class = "UILabel"; text = "Bonus"; ObjectID = "QxF-La-o24"; */
+"QxF-La-o24.text" = "Bonus";
+
+/* Class = "UILabel"; text = "Available stands:"; ObjectID = "S1I-He-Rsg"; */
+"S1I-He-Rsg.text" = "Available stands:";
+
+/* Class = "UILabel"; text = "straat vantrappen 55"; ObjectID = "Wwq-vf-zUf"; */
+"Wwq-vf-zUf.text" = "straat vantrappen 55";
+
+/* Class = "UILabel"; text = "YES"; ObjectID = "XCD-fZ-NwF"; */
+"XCD-fZ-NwF.text" = "YES";
+
+/* Class = "UILabel"; text = "Details"; ObjectID = "eRV-h8-pVJ"; */
+"eRV-h8-pVJ.text" = "Details";
+
+/* Class = "UILabel"; text = "22-06-2018 18:00"; ObjectID = "gsj-2t-aAv"; */
+"gsj-2t-aAv.text" = "22-06-2018 18:00";
+
+/* Class = "UILabel"; text = "OPEN"; ObjectID = "jTP-2i-WKH"; */
+"jTP-2i-WKH.text" = "OPEN";
+
+/* Class = "UILabel"; text = "Villo Brussels"; ObjectID = "mys-fe-9Sc"; */
+"mys-fe-9Sc.text" = "Villo Brussels";
+
+/* Class = "UILabel"; text = "Station name"; ObjectID = "pKI-dp-6Tj"; */
+"pKI-dp-6Tj.text" = "Station name";
+
+/* Class = "UILabel"; text = "20"; ObjectID = "uZu-3R-Sle"; */
+"uZu-3R-Sle.text" = "20";
+
+/* Class = "UILabel"; text = "Banking:"; ObjectID = "uzL-og-Azu"; */
+"uzL-og-Azu.text" = "Banking:";

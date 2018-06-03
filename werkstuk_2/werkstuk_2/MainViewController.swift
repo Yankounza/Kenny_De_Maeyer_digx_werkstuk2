@@ -20,6 +20,11 @@ class MainViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var lastUpdate: UILabel!
     @IBOutlet weak var stationMap: MKMapView!
     
+    @IBOutlet weak var titlelbl: UILabel!
+    @IBOutlet weak var update: UILabel!
+    @IBOutlet weak var refreshBtn: UIButton!
+    
+    
     let coreData: CoreDataController = CoreDataController()
     
     
@@ -27,6 +32,9 @@ class MainViewController: UIViewController, MKMapViewDelegate {
         
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        self.titlelbl.text = NSLocalizedString("title", comment: "")
+        self.update.text = NSLocalizedString("update", comment: "")
         
         if Reachability.isConnectedToNetwork() {
             print("Internet connection OK")

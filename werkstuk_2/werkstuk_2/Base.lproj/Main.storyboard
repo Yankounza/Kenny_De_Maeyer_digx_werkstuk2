@@ -64,7 +64,10 @@
                     <connections>
                         <outlet property="lastUpdate" destination="gsj-2t-aAv" id="crV-ac-5cI"/>
                         <outlet property="refresh" destination="0Pu-Wn-ti5" id="umO-8j-MNh"/>
+                        <outlet property="refreshBtn" destination="0Pu-Wn-ti5" id="qib-qn-LpK"/>
                         <outlet property="stationMap" destination="UWl-tz-Lqm" id="79F-V9-C5v"/>
+                        <outlet property="title" destination="mys-fe-9Sc" id="iNG-1Q-fMB"/>
+                        <outlet property="update" destination="1eF-jE-fOS" id="Co8-SQ-BNp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -120,13 +123,6 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bonus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QxF-La-o24">
                                 <rect key="frame" x="32" y="187" width="85" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total of stands:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7EW-7L-nGT">
-                                <rect key="frame" x="32" y="216" width="135" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -202,17 +198,30 @@
                                 <color key="textColor" red="0.15046112975703341" green="1" blue="0.13045354309766521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total of stands:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7EW-7L-nGT">
+                                <rect key="frame" x="32" y="215" width="135" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="Status" destination="jTP-2i-WKH" id="m81-Qa-Y1E"/>
-                        <outlet property="address" destination="Wwq-vf-zUf" id="ZLg-l2-KQi"/>
+                        <outlet property="actually" destination="PtI-Hv-rlb" id="zXt-eO-Tw9"/>
+                        <outlet property="address" destination="MQ8-aI-YhS" id="zlX-Ug-LH1"/>
+                        <outlet property="av_bikes" destination="Iaq-yO-P1n" id="Gbv-Q7-2XU"/>
+                        <outlet property="av_stands" destination="S1I-He-Rsg" id="cOJ-fJ-vE7"/>
                         <outlet property="availableBikes" destination="2Yh-ZZ-j3T" id="haX-bp-lXu"/>
                         <outlet property="availableStands" destination="uZu-3R-Sle" id="VKq-gn-94D"/>
-                        <outlet property="banking" destination="XCD-fZ-NwF" id="zDk-J8-TK9"/>
-                        <outlet property="bonus" destination="6fc-Jd-eeF" id="VjU-lE-ox1"/>
+                        <outlet property="banking" destination="uzL-og-Azu" id="hKT-Qq-Rmd"/>
+                        <outlet property="bonus" destination="QxF-La-o24" id="C1r-6p-J9l"/>
+                        <outlet property="detail" destination="eRV-h8-pVJ" id="SUd-Xb-fCs"/>
                         <outlet property="name" destination="pKI-dp-6Tj" id="ffc-3e-bdp"/>
+                        <outlet property="status" destination="9vs-Xe-LBm" id="zrj-Ux-Osa"/>
+                        <outlet property="t_stands" destination="7EW-7L-nGT" id="sVf-cz-u26"/>
                         <outlet property="totalOfStands" destination="Pzd-WH-MDK" id="6Rq-r3-ul1"/>
                     </connections>
                 </viewController>

@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  werkstuk_2
+
+  Created by student on 03/06/2018.
+  Copyright © 2018 student. All rights reserved.
+*/
+
+"title" = "Villo Brussel"
+"update" = "Laatste update"
+"refresh" = "Refresh"
+"details" = "Details"
+"address" = "Adres"
+"bank" = "Betaling:"
+"bonus" = "Bonus:"
+"t_stands" = "Totaal van standen:"
+"actually" = "Momenteel"
+"status" = "Status:"
+"av_stands" = "Beschikbaar plaatsen:"
+"av_bikes" = "Beschikbaar fietsen:"

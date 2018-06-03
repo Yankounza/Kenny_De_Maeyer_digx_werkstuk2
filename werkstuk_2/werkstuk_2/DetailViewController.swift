@@ -19,12 +19,33 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var availableStands: UILabel!
     @IBOutlet weak var availableBikes: UILabel!
     
+    @IBOutlet weak var detail: UILabel!
+    @IBOutlet weak var addresslbl: UILabel!
+    @IBOutlet weak var bankinglbl: UILabel!
+    @IBOutlet weak var bonuslbl: UILabel!
+    @IBOutlet weak var t_stands: UILabel!
+    @IBOutlet weak var actually: UILabel!
+    @IBOutlet weak var statuslbl: UILabel!
+    @IBOutlet weak var av_stands: UILabel!
+    @IBOutlet weak var av_bikes: UILabel!
+    
+    
     var station:Station = Station()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        self.detail.text = NSLocalizedString("detail", comment: "")
+        self.addresslbl.text = NSLocalizedString("address", comment: "")
+        self.bankinglbl.text = NSLocalizedString("banking", comment: "")
+        self.bonuslbl.text = NSLocalizedString("bonus", comment: "")
+        self.t_stands.text = NSLocalizedString("t_stands", comment: "")
+        self.actually.text = NSLocalizedString("actually", comment: "")
+        self.statuslbl.text = NSLocalizedString("status", comment: "")
+        self.av_stands.text = NSLocalizedString("av_stands", comment: "")
+        self.av_bikes.text = NSLocalizedString("av_bikes", comment: "")
         
         self.name.text = self.station.name
         self.address.text = self.station.address
